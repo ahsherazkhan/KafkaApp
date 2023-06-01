@@ -75,6 +75,7 @@ Now that you have defined the units, start Kafka and zookeeper with the followin
 - sudo systemctl enable zookeeper
 - sudo systemctl enable kafka
 
+## Testing your Environment
 To begin, create a topic named TutorialTopic:
 - ~/kafka/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic TutorialTopic
 
