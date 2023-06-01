@@ -1,6 +1,6 @@
   # Real-time Dollar rate using Apache Kafka and Node.js
 
-    Application is built in Node.js using Apache kafka (kafkajs). It fetches latest rate of USD from a rest API and after converting to PKR, And a Producer in the kafka cluster boradcast the rate and Consumers who are subscribing to that specific topic recieves the updated Dollar rate.
+   - Application is built in Node.js using Apache kafka (kafkajs). It fetches latest rate of USD from a rest API and after converting to PKR, And a Producer in the kafka cluster boradcast the rate and Consumers who are subscribing to that specific topic recieves the updated Dollar rate.
 
 ## Prerequisites
    - An Linux server with at least 4 GB of RAM and a non-root user with sudo privileges. You can set this up by following our Initial Server Setup guide if you do not have a non-root user set up. Installations with less than 4GB of RAM may cause the Kafka service to fail.
