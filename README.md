@@ -67,7 +67,7 @@ Enter the following unit definition into the file:
 
     [Install]
     WantedBy=multi-user.target
-
+## Start Kafka & Zookerkeeper server 
 Now that you have defined the units, start Kafka and zookeeper with the following command:
 - sudo systemctl start kafka
 - sudo systemctl status kafka
@@ -87,11 +87,9 @@ The following command consumes messages from TutorialTopic. Note the use of the 
 In this new terminal, start a producer to publish a second message:
 - echo "Hello World from Sammy at DigitalOcean!" | ~/kafka/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic TutorialTopic > /dev/null
 
+## Start and run cloned project
 Now that you have successfully setup kafka, now clone the repository with
-- git clone (---RepoLink--)
-
-create a Node project
-- npm init -y
+- git clone https://github.com/ahsherazkhan/KafkaApp
 
 Install dependencies
 - npm i
