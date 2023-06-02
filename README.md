@@ -7,7 +7,7 @@
    - OpenJDK 11 installed on your server(https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-20-04).
    Kafka is written in Java, so it requires a JVM.
 
-
+## Installing kafka
 Create a directoy at /home/ubuntu/
 - mkdir kafka
 - cd kafka
@@ -67,13 +67,14 @@ Enter the following unit definition into the file:
 
     [Install]
     WantedBy=multi-user.target
-## Start Kafka & Zookerkeeper server 
+## Start Kafka server 
 Now that you have defined the units, start Kafka and zookeeper with the following command:
 - sudo systemctl start kafka
+- sudo systemctl enable kafka
 - sudo systemctl status kafka
+## Start Zookerkeeper server 
 - sudo systemctl start zookeeper
 - sudo systemctl enable zookeeper
-- sudo systemctl enable kafka
 
 ## Testing your Environment
 To begin, create a topic named TutorialTopic:
@@ -88,7 +89,7 @@ The following command consumes messages from TutorialTopic. Note the use of the 
 In this new terminal, start a producer to publish a second message:
 - echo "Hello World from Sammy at DigitalOcean!" | ~/kafka/bin/kafka-console-producer.sh --broker-list localhost:9092 --topic TutorialTopic > /dev/null
 
-## Start and run cloned project
+## Start and Run cloned project
 Now that you have successfully setup kafka, now clone the repository with
 - git clone https://github.com/ahsherazkhan/KafkaApp
 
